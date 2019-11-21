@@ -26,9 +26,10 @@
 
 ### `Features`
 The features of the app are available on three different pages.
+
 7. Page 1: Login.
     This is where the user authenticates in order to access their dedicated page.
-    After a successful authentication, the user would be redirected to the __Dashboard__ page if his/her role is `Manager` or the __TodoList__ page if the role is `Biker`.
+    After a successful authentication, the user is be redirected to the __Dashboard__ page if his/her role is `Manager` or the __TodoList__ page if the role is `Biker`.
 
 8. Page 2: Dashboard.
     Here, the user can have an overview and the detailed list of all the shipments(50). By just hovering on the button `Assign to`, the manager can assign an unassigned order to a Biker who is selected from the available list.
