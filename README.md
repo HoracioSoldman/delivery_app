@@ -56,7 +56,7 @@ The features of the app are available on three different pages.
 13. In order to run the app on the development mode or __Runing the Test__, the following are the necessary steps:
     - Navigate to the root folder
     - Run: npm install
-    - Run: npm start or npm test for the test.
+    - Run: `npm start` or `npm test` for the test.
 
 ### `Technologies`
 14. On the front-end: React, Redux, Axios, Socket.io, Enzyme & Jest (for the test)
