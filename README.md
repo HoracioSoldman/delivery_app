@@ -37,9 +37,9 @@ The features of the app are available on three different pages.
     Then in order to leave the app, the user can `Logout` from the right top corner of on the page.
 
 9. Page 3: TodoList.
-    This third page is for Bikers. This user intrface contains an overview and a complete list of shipments which have been assigned to him/her by the manager. The user can then input the time of the pickup or the delivery for each order. 
-    Whenever he makes a change to one of the orders, the manager will be notified instantly. Likewise, if the manager assign an order to this specific biker, the latter will be also notified in real time and the displayed data will be updated accordingly.
-    The process of the logout is the same as in the manager's page.
+    This third page is for Bikers. This user intrface contains an overview and a complete list of shipments which have been         assigned to him/her by the manager. The user can then input the time of the pickup or the delivery for each order. 
+    Whenever he makes a change to one of the orders, the manager will be notified instantly. Likewise, if the manager assign    an order to this specific biker, the latter will be also notified in real time and the displayed data will be updated        accordingly.
+   The process of the logout is the same as in the manager's page.
 
 
 10. The entire app is mobile friendly and support a wide range of browsers.
@@ -49,7 +49,7 @@ The features of the app are available on three different pages.
  
 
 ### `Test`
-12. I have written many Unit and Integration tests in order to minimize the risk of bugs on the app.
+12. I have written 18 Unit and Integration tests in order to minimize the risk of bugs on the app.
 
 
 ### `Development mode`
