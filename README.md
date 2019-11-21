@@ -60,6 +60,7 @@ The features of the app are available on three different pages.
 
 ### `Technologies`
 14. On the front-end: React, Redux, Axios, Styled-components, Socket.io, Enzyme & Jest (for the test)
+    
     On the Back-end: NodeJS, Express, Socket.io
 
  
