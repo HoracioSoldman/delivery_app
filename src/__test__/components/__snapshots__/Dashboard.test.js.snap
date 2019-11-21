@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dashboard renders without crashing 1`] = `
+<Fragment>
+  <Connect(withRouter(Header)) />
+  <styled.h2>
+    Shipments Dashboard
+  </styled.h2>
+  <Overview
+    items={
+      Array [
+        Object {
+          "nbr": 0,
+          "primaryColor": "#607D8B",
+          "secondaryColor": "#78909C",
+          "title": "SHIPMENTS",
+        },
+        Object {
+          "nbr": 0,
+          "primaryColor": "#673AB7",
+          "secondaryColor": "#7E57C2",
+          "title": "WAITING",
+        },
+        Object {
+          "nbr": 0,
+          "primaryColor": "#2196F3",
+          "secondaryColor": "#42A5F5",
+          "title": "ASSIGNED",
+        },
+        Object {
+          "nbr": 0,
+          "primaryColor": "#009688",
+          "secondaryColor": "#26A69A",
+          "title": "PICKED_UP",
+        },
+        Object {
+          "nbr": 0,
+          "primaryColor": "#4CAF50",
+          "secondaryColor": "#66BB6A",
+          "title": "DELIVERED",
+        },
+      ]
+    }
+  />
+  <Shipments
+    shipments={Array []}
+  />
+</Fragment>
+`;

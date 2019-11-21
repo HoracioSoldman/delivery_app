@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OrderDateField renders without crashing 1`] = `
+<styled.div>
+  <span>
+    [Not Set]
+  </span>
+</styled.div>
+`;

@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App renders without crashing 1`] = `
+<BrowserRouter>
+  <Route
+    exact={true}
+    path="/"
+    render={[Function]}
+  />
+  <Connect(PrivateRoute)
+    component={
+      Object {
+        "$$typeof": Symbol(react.memo),
+        "WrappedComponent": [Function],
+        "compare": null,
+        "displayName": "Connect(Dashboard)",
+        "type": [Function],
+      }
+    }
+    path="/dashboard"
+  />
+  <Connect(PrivateRoute)
+    component={
+      Object {
+        "$$typeof": Symbol(react.memo),
+        "WrappedComponent": [Function],
+        "compare": null,
+        "displayName": "Connect(TodoList)",
+        "type": [Function],
+      }
+    }
+    path="/todo-list"
+  />
+</BrowserRouter>
+`;

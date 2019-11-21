@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Overviewitem renders without crashing 1`] = `
+<styled.div
+  onClick={[Function]}
+  primaryColor="#2196F3"
+  secondaryColor="#42A5F5"
+>
+  <h4>
+    ASSIGNED
+  </h4>
+  <p>
+    18
+  </p>
+</styled.div>
+`;
