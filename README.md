@@ -15,7 +15,7 @@
 
 ### `Use case`
 6. User Accounts
-    As described in the question, we have 11 accounts in for the app where 10 of them have __Biker__ as a role and the last one __Manager__.
+    As described in the question, we have 11 accounts for the app where 10 of them have __Biker__ as a role and the last one __Manager__.
     __Bikers Accounts:__
     Username: Biker_0   Password: biker_0
     .
