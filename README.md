@@ -59,7 +59,7 @@ The features of the app are available on three different pages.
     - Run: `npm start` or `npm test` for the test.
 
 ### `Technologies`
-14. On the front-end: React, Redux, Axios, Socket.io, Enzyme & Jest (for the test)
+14. On the front-end: React, Redux, Axios, Styled-components, Socket.io, Enzyme & Jest (for the test)
     On the Back-end: NodeJS, Express, Socket.io
 
  
