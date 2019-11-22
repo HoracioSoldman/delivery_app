@@ -89,10 +89,19 @@ let ApiStore = (function(){
 
                 if(status === availableStatus[3]){
                     //Assuming that the shipment time is between 1 to 4 hours
-                    date0.setHours(date0.getHours()+getRandomNbr(1, 4), getRandomNbr(0, 59)) 
-                    assignment.delivery = date0;
+                    let date1 = new Date(
+                        `${date0.getFullYear()}-${date0.getMonth()}-${date0.getDate()} 
+                        ${date0.getHours()+getRandomNbr(1, 4)}:${getRandomNbr(0, 59)}`
+                        );
+                    
+                    assignment.delivery = date1;
                 }
             }
+            
+                if(status === 'DELIVERED'){
+                    console.log('P:',assignment.pickup, 'D:', assignment.delivery);
+                }
+            
 
             return assignment;
         }
@@ -106,6 +115,7 @@ let ApiStore = (function(){
         }
 
         function getShipments(){
+            
             return shipments.length === 0 ? generateShipments() : shipments;
         }
 

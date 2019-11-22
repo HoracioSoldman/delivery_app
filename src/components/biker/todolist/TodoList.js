@@ -2,11 +2,11 @@ import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import PropTypes from 'prop-types'
 import Overview from '../../list-overview/Overview'
-import Orders from '../order/Orders'
 import Header from '../../Header'
 import {fetchShipments, updateAllShipments} from '../../../redux/actions/shipment-actions'
 import { isLoggedIn } from '../../../redux/actions/user-actions'
 import {PageTitle} from '../../stylus'
+import Table from '../../list-table/Table'
 
 class TodoList extends Component{
 
@@ -24,7 +24,7 @@ class TodoList extends Component{
             (shp.status === 'ASSIGNED' || shp.status === 'PICKED_UP' || shp.status === 'DELIVERED')  
             && shp.assignee.id === user.id
         ))
-        const summaries = [
+        const summary = [
             {title: 'ORDERS', nbr:filteredShipments.length, primaryColor:'#673AB7', secondaryColor: '#7E57C2'},
             {title: 'ASSIGNED', nbr:0, primaryColor:'#2196F3', secondaryColor: '#42A5F5'},
             {title: 'PICKED_UP', nbr:0, primaryColor:'#009688', secondaryColor: '#26A69A'},
@@ -35,15 +35,15 @@ class TodoList extends Component{
             
             switch(shp.status){
                 case 'ASSIGNED':
-                    summaries[1].nbr++;
+                    summary[1].nbr++;
                 break;
                 
                 case 'PICKED_UP':
-                    summaries[2].nbr++;
+                    summary[2].nbr++;
                 break;
                 
                 case 'DELIVERED':
-                    summaries[3].nbr++;
+                    summary[3].nbr++;
                 break;
                 default:
                     //
@@ -54,9 +54,11 @@ class TodoList extends Component{
         })
         
 
+        const table_header = ['#', 'ID', 'Origin', 'Destination', 'Pick Up', 'Delivery'];
+        
         //Filter the list according to what has been clicked on the Overview list
         //It Can be ORDERS, ASSIGNED,...
-        const list = this.props.filter === '' || this.props.filter === 'ORDERS' ?
+        const table_body = this.props.filter === '' || this.props.filter === 'ORDERS' ?
                     filteredShipments:
                     filteredShipments.filter(shp =>(shp.status === this.props.filter));
     
@@ -65,9 +67,9 @@ class TodoList extends Component{
                 <Header />
                 <PageTitle>Orders TodoList</PageTitle>
                 
-                <Overview items={summaries}/>
+                <Overview items={summary}/>
     
-                <Orders orders={list}/>
+                <Table body={table_body} user_role={user.role} header={table_header}/>
                 
             </React.Fragment>
         )
