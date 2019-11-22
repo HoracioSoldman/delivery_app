@@ -98,10 +98,6 @@ let ApiStore = (function(){
                 }
             }
             
-                if(status === 'DELIVERED'){
-                    console.log('P:',assignment.pickup, 'D:', assignment.delivery);
-                }
-            
 
             return assignment;
         }

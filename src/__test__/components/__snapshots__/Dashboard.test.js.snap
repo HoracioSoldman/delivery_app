@@ -42,8 +42,20 @@ exports[`Dashboard renders without crashing 1`] = `
       ]
     }
   />
-  <Shipments
-    shipments={Array []}
+  <Table
+    body={Array []}
+    header={
+      Array [
+        "#",
+        "ID",
+        "Origin",
+        "Destination",
+        "Status",
+        "Assignee",
+        "Pick Up",
+        "Delivery",
+      ]
+    }
   />
 </Fragment>
 `;

@@ -36,8 +36,18 @@ exports[`TodoList renders without crashing 1`] = `
       ]
     }
   />
-  <Orders
-    orders={Array []}
+  <Table
+    body={Array []}
+    header={
+      Array [
+        "#",
+        "ID",
+        "Origin",
+        "Destination",
+        "Pick Up",
+        "Delivery",
+      ]
+    }
   />
 </Fragment>
 `;
