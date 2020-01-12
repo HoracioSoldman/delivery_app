@@ -11,17 +11,23 @@ exports.fetchBikers = (req, res)=> {
 }
 
 exports.fetchShipments = (req, res)=> {
-    
-    res.json({label:'List of all Shipments', data: apiStore.allShipments()});
+    const usr = res.locals.authenticatedUser;
+    let filter = usr.role === 'Biker' ? usr.id : null;
+    res.json({label:'List of all Shipments', data: apiStore.allShipments(filter)});
     
 }
 
 exports.updateSingleShipment = (req, res)=> {
-    
-    res.json(
+    const usr = res.locals.authenticatedUser;
+    const {updatedShipment} = req.body;
+    if(usr.role === 'Biker' && 
+        (updatedShipment.assignee === null || updatedShipment.assignee.id !== usr.id)){
+            res.status(401).send({message: 'Access Denied! You can only update your own shipment!'});
+//////////////////////////: SET A HANDLER OF THIS ERROR ON THE FRONT (MAYBE AN ALERT WOULD BE ENOUGH)    
+    }else res.json(
         {
             label:'Updated list of all Shipments', 
-            data: apiStore.updateShipment(req.body.updatedShipment, req)
+            data: apiStore.updateShipment(updatedShipment, req)
         }
     );
     

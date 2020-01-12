@@ -90,14 +90,16 @@ let ApiStore = (function(){
                 if(status === availableStatus[3]){
                     //Assuming that the shipment time is between 1 to 4 hours
                     let date1 = new Date(
-                        `${date0.getFullYear()}-${date0.getMonth()}-${date0.getDate()} 
+                        `${date0.getFullYear()}-${date0.getMonth()+1}-${date0.getDate()} 
                         ${date0.getHours()+getRandomNbr(1, 4)}:${getRandomNbr(0, 59)}`
                         );
-                    
+    
                     assignment.delivery = date1;
+                    
                 }
             }
             
+
 
             return assignment;
         }
@@ -110,9 +112,16 @@ let ApiStore = (function(){
             return users[getRandomNbr(0, bikers.length-1)]
         }
 
-        function getShipments(){
+        function getShipments(filter){
             
-            return shipments.length === 0 ? generateShipments() : shipments;
+            let shps = shipments.length === 0 ? generateShipments() : shipments;
+            
+            return filter !== null ? 
+            shps.filter(shp=>(
+                shp.status !== availableStatus[0] && shp.assignee.id === filter
+            )) :
+            shps;
+
         }
 
         function getBikers(){

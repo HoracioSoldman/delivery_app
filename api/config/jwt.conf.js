@@ -19,8 +19,10 @@ module.exports.verifyJwtToken = (req, res, next) => {
                     let usr = decoded.user;
                     
                     let authResult = apiStore.verifyUser(usr.id);
-                    if(authResult.status === 'SUCCESS')
+                    if(authResult.status === 'SUCCESS'){
+                        res.locals.authenticatedUser = usr;
                         next();
+                    }
                     else return res.status(500).send({ auth: false, message: 'Token authentication failed.' });
                 }
             }
