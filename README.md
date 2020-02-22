@@ -50,7 +50,7 @@ The features of the app are available on three different pages.
  
 
 ### `Test`
-12. I have written 18 Unit and Integration tests in order to minimize the risk of bugs on the app.
+12. There are several Unit and Snapshot tests
 
 
 ### `Development mode`
@@ -60,12 +60,8 @@ The features of the app are available on three different pages.
     - Run: `npm start` or `npm test` for the test.
 
 ### `Technologies`
-<<<<<<< HEAD
-14. On the front-end: React, Redux, Axios, Styled-components, Socket.io, Enzyme & Jest (for the test)
-=======
 14. On the front-end: React, Redux, Axios, Styled-components, Socket.io, Webpack, Enzyme & Jest (for the test)
->>>>>>> 281a65e3d6c8785630da3cc85b1f8b6467e56a74
-    
+
     On the Back-end: NodeJS, Express, Socket.io, Passport, JWT.
 
  
